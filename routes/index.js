@@ -1,8 +1,10 @@
 const router = require("express").Router();
+const User = require("../models/User.model");
+const bcrypt = require("bcryptjs")
 
 /* GET home page */
 router.get("/", (req, res, next) => {
-  res.render("index");
+  res.render("auth/signup");
 });
 
 router.post('/signup', async (req, res) => {
